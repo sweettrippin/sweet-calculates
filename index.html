@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Mechanic Calculator</title>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+        <h1 class="text-2xl font-bold text-gray-900 flex justify-between items-center">
+            Mechanic Calculator <span class="text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded">LITE</span>
+        </h1>
+        <p class="text-sm text-gray-500 mt-1">By <a href="https://jogjagamers.org/profile/141594-6sweet/" class="text-blue-500">@6sweet</a></p>
+        
+        <div class="mt-6 space-y-4">
+            <div>
+                <h2 class="text-lg font-semibold text-gray-800">Price Calculation</h2>
+                <p class="text-xs text-gray-500">(Comp x Price) x (100 + Profit)% = Price</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="flex justify-between text-gray-600 font-medium">
+                    <span>Base Cost</span>
+                    <span id="modal" class="text-gray-900">$0.00</span>
+                </div>
+                <div class="flex justify-between text-gray-600 font-medium mt-2">
+                    <span>Profit</span>
+                    <span id="profit" class="text-gray-900">$0.00</span>
+                </div>
+                <div class="flex justify-between text-lg font-bold mt-2">
+                    <span>Total</span>
+                    <span id="total" class="text-green-600">$0.00</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-6 space-y-4">
+            <div>
+                <label class="text-gray-700 font-medium">Profit Percentage</label>
+                <div class="flex items-center mt-2 space-x-2">
+                    <input type="number" id="profitInput" value="20" class="w-16 p-2 border rounded-md text-center">
+                    <input type="range" id="profitRange" min="0" max="100" value="20" class="flex-1">
+                </div>
+            </div>
+            <div>
+                <label class="text-gray-700 font-medium">Component Quantity</label>
+                <input type="text" id="componentInput" value="0" class="w-full p-2 border rounded-md mt-2">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
